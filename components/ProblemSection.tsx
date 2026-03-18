@@ -50,7 +50,9 @@ const stats = [
 
 export default function ProblemSection() {
   return (
-    <section id="features" className="py-24 bg-[#0d0d1a]">
+    <section id="problem" className="py-24 bg-[#0d0d1a] relative">
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#0a0a0f] to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

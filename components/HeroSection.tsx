@@ -83,8 +83,8 @@ export default function HeroSection() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#how-it-works"
-              onClick={(e) => { e.preventDefault(); document.querySelector("#how-it-works")?.scrollIntoView({ behavior: "smooth" }); }}
+              href="#solution"
+              onClick={(e) => { e.preventDefault(); document.querySelector("#solution")?.scrollIntoView({ behavior: "smooth" }); }}
               className="flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-slate-300 border border-white/20 hover:border-white/40 hover:text-white bg-white/5 transition-all duration-200 text-base"
             >
               <Play className="w-4 h-4" />
@@ -97,21 +97,21 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-sm text-slate-500 mb-16"
+            className="text-sm text-slate-500 mb-12"
           >
             Join 12,000+ students, creators, and remote teams rebuilding their focus
           </motion.p>
 
           {/* Floating stat cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {floatingCards.map((card) => (
               <motion.div
                 key={card.label}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 + card.delay }}
-                className={`glass rounded-2xl p-4 bg-gradient-to-br ${card.color} border ${card.border} animate-float`}
-                style={{ animationDelay: `${card.delay}s` }}
+                whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                className={`glass rounded-2xl p-5 bg-gradient-to-br ${card.color} border ${card.border}`}
               >
                 <div className="text-2xl font-bold text-white mb-1">{card.value}</div>
                 <div className="text-xs text-slate-400 leading-tight">{card.label}</div>
