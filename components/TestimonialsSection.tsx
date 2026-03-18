@@ -80,6 +80,7 @@ export default function TestimonialsSection() {
               are saying
             </span>
           </h2>
+          {/* NOTE: These are placeholder stats for the prelaunch landing page — update with real data at launch */}
           <p className="text-lg text-slate-400">12,000+ beta users. Real results. No fluff.</p>
         </motion.div>
 
