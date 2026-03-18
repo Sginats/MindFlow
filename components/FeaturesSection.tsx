@@ -87,7 +87,9 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="features-detail" className="py-24 bg-[#0a0a0f]">
+    <section id="features" className="py-24 bg-[#0a0a0f] relative">
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#0d0d1a] to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -118,8 +120,8 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-              className={`glass rounded-2xl p-6 bg-gradient-to-br ${feature.color} border ${feature.border} cursor-default`}
+              whileHover={{ scale: 1.03, y: -4, transition: { duration: 0.2 } }}
+              className={`glass rounded-2xl p-6 bg-gradient-to-br ${feature.color} border ${feature.border} cursor-default hover:shadow-lg hover:shadow-blue-500/5`}
             >
               <div className="text-3xl mb-4">{feature.icon}</div>
               <h3 className="text-base font-bold text-white mb-2">{feature.title}</h3>

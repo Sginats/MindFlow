@@ -59,7 +59,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
-            © 2024 MindFlow. Built for the overstimulated internet age.
+            © 2025 MindFlow. Built for the overstimulated internet age.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Privacy</a>
